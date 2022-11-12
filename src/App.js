@@ -1,7 +1,9 @@
 import React from 'react';
 import LoginForm from './pages/LoginForm';
+import StateDinamis from './pages/StateDinamis';
 // Arrow Function
 const App = () => {
+  // return <StateDinamis />;
   return <LoginForm />;
 };
 

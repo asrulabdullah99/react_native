@@ -5,7 +5,22 @@ import eyeIcon from '../../assets/icons/ic_view_pass.png';
 import leftArrow from '../../assets/icons/angle-small-left.png';
 
 class LoginForm extends Component {
+  constructor(props) {
+    super(props);
+    console.log('hello constructor');
+    //contoh untuk trigger component did update
+  }
+
+  //Componen Did Mount bebas mau simpan dimana
+  componentDidMount() {
+    console.log('componen did mount');
+  }
+
+  componentDidUpdate() {
+    console.log('componen did update');
+  }
   render() {
+    console.log('render');
     return (
       <View>
         <NavTopComponent />
@@ -42,11 +57,17 @@ class ArrowComponent extends Component {
   }
 }
 
-class WelcomeTitleComponent extends Component {
+class WelcomeTitleComponent extends React.Component {
+  state = {
+    nama: 'IFApps',
+  };
   render() {
     return (
       <View>
-        <Text style={styles.welcome}>Selamat Datang di {'\n'}BUMDES</Text>
+        <Text style={styles.welcome}>
+          Selamat Datang di {'\n'}
+          {this.state.nama}
+        </Text>
         <Text style={styles.secondaryTitle}>
           Silahkan masukan data untuk login
         </Text>

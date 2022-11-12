@@ -1,21 +1,17 @@
 import React, {Component} from 'react';
-import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
-import status from './assets/container.png';
-import leftArrow from './assets/angle-small-left.png';
-import eyeIcon from './assets/ic_view_pass.png';
+import {View, Text, Image, StyleSheet} from 'react-native';
+import status from '../../assets/icons/container.png';
+import eyeIcon from '../../assets/icons/ic_view_pass.png';
+import leftArrow from '../../assets/icons/angle-small-left.png';
 
-class LoginFormComponent extends Component {
+class LoginForm extends Component {
   render() {
     return (
-      <ScrollView>
-        <View>
-          <NavTopComponent />
-          <ArrowComponent />
-          <WelcomeTitleComponent />
-          <WelcomeTitleComponent />
-          <WelcomeTitleComponent />
-        </View>
-      </ScrollView>
+      <View>
+        <NavTopComponent />
+        <ArrowComponent />
+        <WelcomeTitleComponent />
+      </View>
     );
   }
 }
@@ -179,4 +175,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginFormComponent;
+export default LoginForm;

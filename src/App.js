@@ -1,8 +1,8 @@
 import React from 'react';
-import LoginFormComponent from './loginForm';
+import LoginForm from './pages/LoginForm';
 // Arrow Function
 const App = () => {
-  return <LoginFormComponent />;
+  return <LoginForm />;
 };
 
 // class LoginFormComponent extends Component {

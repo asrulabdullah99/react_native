@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
 import LoginForm from './pages/LoginForm';
+import PropsDinamis from './pages/PropsDinamis';
 import StateDinamis from './pages/StateDinamis';
 // Arrow Function
 const App = () => {
@@ -11,7 +12,15 @@ const App = () => {
     }, 6000);
   }, []);
   // return <StateDinamis />;
-  return <View>{isShow && <LoginForm />}</View>;
+  //if else function
+  // return <View>{isShow && <LoginForm />}</View>;
+  return (
+    <View>
+      {/* <LoginForm /> */}
+      {/* <StateDinamis /> */}
+      <PropsDinamis />
+    </View>
+  );
 };
 
 // class LoginFormComponent extends Component {

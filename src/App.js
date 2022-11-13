@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {View} from 'react-native';
 import LoginForm from './pages/LoginForm';
 import StateDinamis from './pages/StateDinamis';
 // Arrow Function
 const App = () => {
+  const [isShow, SetIsShow] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      SetIsShow(false);
+    }, 6000);
+  }, []);
   // return <StateDinamis />;
-  return <LoginForm />;
+  return <View>{isShow && <LoginForm />}</View>;
 };
 
 // class LoginFormComponent extends Component {

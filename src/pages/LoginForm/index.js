@@ -1,5 +1,5 @@
 import React, {Component, useEffect, useState} from 'react';
-import {View, Text, Image, StyleSheet, Button} from 'react-native';
+import {View, Text, Image, StyleSheet, Button, TextInput} from 'react-native';
 import status from '../../assets/icons/container.png';
 import eyeIcon from '../../assets/icons/ic_view_pass.png';
 import leftArrow from '../../assets/icons/angle-small-left.png';
@@ -269,28 +269,12 @@ const WelcomeTitleComponent = () => {
       </Text>
       <Text style={styles.email}>Email/Phone</Text>
       <View style={styles.emailTextField}>
-        <Text
-          style={{
-            color: '#C4C5C4',
-            fontSize: 14,
-            fontWeight: 'regular',
-            marginVertical: 14,
-            marginLeft: 20,
-          }}>
-          Masukan Alamat Email/No Telepon Anda
-        </Text>
+        <TextInput placeholder="Masukan alamat email/no telepon anda" />
       </View>
       <View>
         <Text style={styles.password}>Password</Text>
         <View style={styles.passwordTextField}>
-          <Text
-            style={{
-              marginVertical: 16,
-              marginHorizontal: 20,
-              color: '#C4C5C4',
-            }}>
-            Masukan kata sandi akun
-          </Text>
+          <TextInput placeholder="Masukan password anda" />
           <Image
             source={eyeIcon}
             style={{marginVertical: 15, marginHorizontal: 14}}></Image>

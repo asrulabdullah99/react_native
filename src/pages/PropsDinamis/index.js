@@ -5,9 +5,7 @@ const Story = props => {
   return (
     <View style={{alignItems: 'center', marginRight: 20}}>
       <Image
-        source={{
-          uri: props.gambar,
-        }}
+        source={{uri: props.gambar}}
         style={{width: 70, height: 70, borderRadius: 70 / 2}}
       />
       <Text style={{maxWidth: 70}}>{props.judul}</Text>

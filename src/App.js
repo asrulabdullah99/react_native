@@ -1,12 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
-import Cart from './assets/component/Cart';
 import Communication from './pages/Communication';
-import LoginForm from './pages/LoginForm';
-import MenuBeli from './pages/MenuBeli';
-import Position from './pages/Position';
-import PropsDinamis from './pages/PropsDinamis';
-import StateDinamis from './pages/StateDinamis';
+
 // Arrow Function
 const App = () => {
   const [isShow, SetIsShow] = useState(true);

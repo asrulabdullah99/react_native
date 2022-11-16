@@ -63,11 +63,10 @@ const BasicJavascript = () => {
       <Text>Usia : {usia}</Text>
       <Text>{sapaHewan(hewanPeliharaan)}</Text>
       <Text>{namaOrang[0]}</Text>
-      <Text>{namaOrang[1]}</Text>
-      <Text>{namaOrang[2]}</Text>
       <Text>Looping</Text>
       {namaOrang.map(x => (
-        <Text>{x}</Text>
+        // eslint-disable-next-line react/jsx-key
+        <Text key={x}>{x}</Text>
       ))}
     </View>
   );

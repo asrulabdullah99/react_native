@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
-import BasicJavascript from './pages/BasicJavascript';
-import Communication from './pages/Communication';
+import ReactNativeSVG from './pages/ReactNativeSVG';
 
 // Arrow Function
 const App = () => {
@@ -23,7 +22,8 @@ const App = () => {
       {/* <Position /> */}
       {/* <MenuBeli /> */}
       {/* <Cart /> */}
-      <BasicJavascript />
+      {/* <BasicJavascript /> */}
+      <ReactNativeSVG />
     </View>
   );
 };

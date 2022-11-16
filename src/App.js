@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
+import BasicJavascript from './pages/BasicJavascript';
 import Communication from './pages/Communication';
 
 // Arrow Function
@@ -18,10 +19,11 @@ const App = () => {
       {/* <LoginForm /> */}
       {/* <StateDinamis /> */}
       {/* <PropsDinamis /> */}
-      <Communication />
+      {/* <Communication /> */}
       {/* <Position /> */}
       {/* <MenuBeli /> */}
       {/* <Cart /> */}
+      <BasicJavascript />
     </View>
   );
 };

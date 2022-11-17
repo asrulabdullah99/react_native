@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
-import CallAPIVanilla from './pages/CallAPIVanilla';
-import ReactNativeSVG from './pages/ReactNativeSVG';
+import CallAPIAxios from './pages/CallAPIAxios';
 
 // Arrow Function
 const App = () => {
@@ -25,7 +24,8 @@ const App = () => {
       {/* <Cart /> */}
       {/* <BasicJavascript /> */}
       {/* <ReactNativeSVG /> */}
-      <CallAPIVanilla />
+      {/* <CallAPIVanilla /> */}
+      <CallAPIAxios />
     </View>
   );
 };

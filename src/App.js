@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
 import CallAPIAxios from './pages/CallAPIAxios';
+import CallAPIVanilla from './pages/CallAPIVanilla';
+import LocalAPI from './pages/LocalAPI';
 
 // Arrow Function
 const App = () => {
@@ -25,7 +27,8 @@ const App = () => {
       {/* <BasicJavascript /> */}
       {/* <ReactNativeSVG /> */}
       {/* <CallAPIVanilla /> */}
-      <CallAPIAxios />
+      {/* <CallAPIAxios /> */}
+      <LocalAPI />
     </View>
   );
 };

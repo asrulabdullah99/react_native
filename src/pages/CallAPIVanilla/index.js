@@ -1,4 +1,4 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View, Image} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
 const CallAPIVanilla = () => {
@@ -7,8 +7,11 @@ const CallAPIVanilla = () => {
     // email: '',
     // first_name: '',
     // last_name: '',
-    title: '',
-    body: '',
+    avatar: '',
+    email: '',
+    name: '',
+    // title: '',
+    // body: '',
   });
   //Call Fake API JSONPlaceholder with JS basic
   // Call API method GET
@@ -37,34 +40,37 @@ const CallAPIVanilla = () => {
     //     console.log('post response:', json);
     //   });
   }, []);
+  const getData = () => {
+    fetch('https://reqres.in/api/users/2')
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        setDataUser(json.data);
+      });
+  };
+
+  //jika API tidak ada array
   // const getData = () => {
-  //   fetch('https://reqres.in/api/users/2')
+  //   fetch('http://10.0.2.2:8000/api/data-dosen/4')
   //     .then(response => response.json())
   //     .then(json => {
   //       console.log(json);
   //       setDataUser(json.data);
   //     });
   // };
-
-  //jika API tidak ada array
-  const getData = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts/2')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json);
-        setDataUser(json);
-      });
-  };
   return (
     <View style={styles.container}>
       <Text style={styles.textTitle}>Call API dengan Vanilla JS</Text>
       <Button title="GET DATA" onPress={getData} />
       <Text>Response GET DATA</Text>
-      {/* <Image source={{uri: dataUser.avatar}} style={styles.avatar} />
-      <Text>{`${dataUser.first_name} ${dataUser.last_name}`}</Text>
-      <Text>{dataUser.email}</Text> */}
-      <Text>Title : {dataUser.title}</Text>
-      <Text>Body : {dataUser.body}</Text>
+      <View style={styles.thumbnail}>
+        <Image
+          source={{uri: 'http://10.0.2.2:8000/storage/' + dataUser.avatar}}
+          style={styles.avatar}
+        />
+      </View>
+      <Text>{`${dataUser.name}`}</Text>
+      <Text>{dataUser.email}</Text>
       <View style={styles.line}></View>
       <Button title="POST DATA"></Button>
       <Text>Response POST DATA</Text>
@@ -79,4 +85,5 @@ const styles = StyleSheet.create({
   textTitle: {textAlign: 'center'},
   line: {height: 2, backgroundColor: 'black', marginVertical: 20},
   avatar: {width: 100, height: 100, borderRadius: 50},
+  thumbnail: {alignItems: 'center'},
 });

@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Asrul Abdullah",
+      "email": "srulabdullah@gmail.com",
+      "bidang": "ilmu komputer"
+    }
+  ]
+}
